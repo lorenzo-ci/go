@@ -1,0 +1,953 @@
+@media (prefers-color-scheme: dark) {
+      :root {
+      --mdc-theme-primary: black; /* The theme primary color */
+      --mdc-theme-on-primary: #fce3e3;
+      --mdc-theme-primary-bg: grey;
+      --mdc-theme-secondary: black;
+      --mdc-theme-on-secondary: white;
+      --mdc-theme-surface: #282c2c;
+      --mdc-theme-on-surface: #e4cbcb;
+      --mdc-theme-background: black; /* The theme background color */
+      --mdc-theme-on-background: white;
+      --mdc-theme-accent: #414747; /* The theme accent color */
+      --mdc-theme-text-primary-on-primary: white; /* Primary text on top of a theme primary color background */
+      --mdc-theme-text-hint-on-primary: white; /* Hint text on top of a theme primary color background */
+      --mdc-theme-text-disabled-on-primary: ivory; /* Disabled text on top of a theme primary color background */
+      --mdc-theme-text-icon-on-primary: white; /* Icons on top of a theme primary color background */
+      --mdc-theme-text-secondary-on-primary: ivory; /* Secondary text on top of a theme primary color background */
+      --mdc-theme-text-primary-on-accent: white; /* Primary text on top of a theme accent color background */
+      --mdc-theme-text-secondary-on-accent: ivory; /* Secondary text on top of a theme accent color background */
+      --mdc-theme-text-hint-on-accent: ivory; /* Hint text on top of a theme accent color background */
+      --mdc-theme-text-disabled-on-accent: dimgrey; /* Disabled text on top of a theme accent color background */
+      --mdc-theme-text-icon-on-accent: black; /* Icons on top of a theme accent color background */
+      --mdc-theme-text-primary-on-background: white; /* Primary text on top of the theme background color */
+      --mdc-theme-text-secondary-on-background: ivory; /* Secondary text on top of the theme background color */
+      --mdc-theme-text-hint-on-background: dimgrey; /* Hint text on top of the theme background color */
+      --mdc-theme-text-disabled-on-background: dimgrey; /* Disabled text on top of the theme background color */
+      --mdc-theme-text-icon-on-background: white; /* Icons on top of the theme background color */
+    }
+
+    .mdc-card--outlined {
+      border-color: #080808;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+      :root {
+      --mdc-theme-primary: #f2f6fc; /* The theme primary color */
+      --mdc-theme-on-primary: black;
+      --mdc-theme-primary-bg: grey;
+      --mdc-theme-secondary: #888a8b;
+      --mdc-theme-on-secondary: black;
+      --mdc-theme-surface: white;
+      --mdc-theme-on-surface: black;
+      --mdc-theme-background: white; /* The theme background color */
+      --mdc-theme-on-background: black;
+      --mdc-theme-accent: silver; /* The theme accent color */
+      --mdc-theme-text-primary-on-primary: white; /* Primary text on top of a theme primary color background */
+      --mdc-theme-text-hint-on-primary: white; /* Hint text on top of a theme primary color background */
+      --mdc-theme-text-disabled-on-primary: ivory; /* Disabled text on top of a theme primary color background */
+      --mdc-theme-text-icon-on-primary: white; /* Icons on top of a theme primary color background */
+      --mdc-theme-text-secondary-on-primary: ivory; /* Secondary text on top of a theme primary color background */
+      --mdc-theme-text-primary-on-accent: black; /* Primary text on top of a theme accent color background */
+      --mdc-theme-text-secondary-on-accent: slategrey; /* Secondary text on top of a theme accent color background */
+      --mdc-theme-text-hint-on-accent: lightslategrey; /* Hint text on top of a theme accent color background */
+      --mdc-theme-text-disabled-on-accent: #e1eaf7; /* Disabled text on top of a theme accent color background */
+      --mdc-theme-text-icon-on-accent: #414747; /* Icons on top of a theme accent color background */
+      --mdc-theme-text-primary-on-background: black; /* Primary text on top of the theme background color */
+      --mdc-theme-text-secondary-on-background: #414747; /* Secondary text on top of the theme background color */
+      --mdc-theme-text-hint-on-background: #414747; /* Hint text on top of the theme background color */
+      --mdc-theme-text-disabled-on-background: dimgrey; /* Disabled text on top of the theme background color */
+      --mdc-theme-text-icon-on-background: black; /* Icons on top of the theme background color */
+    }
+    .mdc-text-field .mdc-text-field__input {
+      caret-color: var(--mdc-theme-on-primary);
+    }
+}
+
+:root {
+    /* MDC Color Theming see http://jsfiddle.net/k8ptmxdz/2/
+     * https://stackoverflow.com/questions/52380559/how-to-set-primary-and-secondary-colors-in-material-design-components-for-web */
+    --mdc-theme-primary-light: black; /* The theme primary color (light variant) */
+    --mdc-theme-primary-light-bg: grey; /* Sets the background color to the theme primary color (light variant) */
+    --mdc-theme-secondary-light: dimgrey; /* The theme secondary color (light variant) */
+    --mdc-theme-secondary-light-bg: white; /* Sets the background color to the theme secondary color (light variant) */
+    --mdc-theme-on-surface-light: black;
+    --mdc-theme-text-primary-on-light: black; /* Primary text on top of a light-colored background */
+    --mdc-theme-text-secondary-on-light: darkslategrey; /* Secondary text on top of a light-colored background */
+    --mdc-theme-text-hint-on-light: slategrey; /* Hint text on top of a light-colored background */
+    --mdc-theme-text-disabled-on-light: ivory; /* Disabled text on top of a light-colored background */
+    --mdc-theme-text-icon-on-light: black; /* Icons on top of a light-colored background */
+    --mdc-theme-primary-dark: white; /* The theme primary color (dark variant) */
+    --mdc-theme-primary-dark-bg: white; /* Sets the background color to the theme primary color (dark variant) */
+    --mdc-theme-secondary-dark: darkslategrey; /* The theme secondary color (dark variant) */
+    --mdc-theme-secondary-dark-bg: black; /* Sets the background color to the theme secondary color (dark variant) */
+    --mdc-theme-text-primary-on-dark: white; /* Primary text on top of a dark-colored background */
+    --mdc-theme-text-secondary-on-dark: ivory; /* Secondary text on top of a dark-colored background */
+    --mdc-theme-text-hint-on-dark: lightgrey; /* Hint text on top of a dark-colored background */
+    --mdc-theme-text-disabled-on-dark: lightgrey; /* Disabled text on top of a dark-colored background */
+    --mdc-theme-text-icon-on-dark: white; /* Icons on top of a dark-colored background */
+    --th-padding: 0.2em;
+    --td-padding: 0.2em;
+    /* the track-color of switches is not defined */
+    --mdc-switch-selected-focus-handle-color: darkslategrey;
+    --mdc-switch-selected-icon-color: var(--mdc-theme-on-primary) !important;
+    --mdc-switch-selected-focus-handle-color: var(--mdc-theme-text-hint-on-dark);
+    --mdc-switch-selected-focus-track-color: var(--mdc-theme-text-hint-on-accent);
+    --mdc-switch-selected-handle-color: var(--mdc-theme-primary);
+    --mdc-switch-selected-hover-handle-color: var(--mdc-theme-primary);
+    --mdc-switch-selected-hover-state-layer-color: var(--mdc-theme-primary);
+    --mdc-switch-selected-hover-track-color: var(--mdc-theme-text-secondary-on-light);
+    --mdc-switch-selected-icon-color: var(--mdc-theme-on-primary);
+    --mdc-switch-selected-pressed-handle-color: var(--mdc-theme-background);
+    --mdc-switch-selected-pressed-track-color: var(--mdc-theme-text-hint-on-accent);
+    --mdc-switch-selected-track-color: var(--mdc-theme-secondary);
+    --mdc-switch-unselected-handle-color: var(--mdc-theme-secondary-dark);
+    --mdc-switch-unselected-icon-color: var(--mdc-theme-text-hint-on-primary);
+    --mdc-switch-unselected-track-color: var(--mdc-theme-secondary);
+    --mdc-outlined-button-label-text-color: var(--mdc-theme-on-primary);
+    /* MDC cards corners radius size */
+    --mdc-shape-medium: 16px;
+    --mdc-layout-grid-margin-desktop: 20px;
+    --mdc-layout-grid-gutter-desktop: 16px;
+    --mdc-slidable-drawer-transition-open-time: 0.13s;
+    --mdc-typography-font-family: 'Roboto';
+    --mdc-typography-subtitle1-font-weight: 400;
+    --mdc-typography-subtitle2-font-weight: 600;
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
+html {
+    height: 100%;
+}
+
+body {
+/* see https://m2.material.io/components/navigation-drawer/web#other-variants */
+    display: flex;
+    height: 100vh;
+/*    flex-direction: column;
+    min-height: 100%; */
+    margin: 0px; /* necessary to stop user-agent style */
+}
+
+.mdc-drawer .mdc-deprecated-list-item {
+    font-size: 1rem;
+}
+
+/* MDC drawer opening has a white background
+ * that is not user friendly in dark mode
+ * This shortens the transition duration
+ * to the minimum
+ * In M3 the opening background will be
+ * adjustable
+ */
+.mdc-drawer--opening {
+    transition-duration: 1ms
+}
+
+.mdc-drawer-app-content {
+    /* see https://m2.material.io/components/navigation-drawer/web#other-variants */
+    flex: auto;
+    overflow: auto;
+    position: relative;
+}
+
+.main-content {
+    /* see https://m2.material.io/components/navigation-drawer/web#other-variants */
+    overflow: auto;
+    height: 100%;
+    padding: 0 8px;
+    background: var(--mdc-theme-primary);
+  }
+
+div.details {
+    margin: 8px 0;
+}
+
+.app-bar {
+    /* see https://m2.material.io/components/navigation-drawer/web#other-variants */
+    position: absolute;
+}
+
+.mdc-top-app-bar {
+    color: var(--mdc-theme-on-primary);
+    /* Only apply this style if below top app bar */
+    /* see https://m2.material.io/components/navigation-drawer/web#other-variants */
+    z-index: 7;
+}
+
+.mdc-drawer-app-content {
+    background: var(--mdc-theme-primary);
+}
+
+.mdc-drawer .mdc-deprecated-list-group__subheader {
+    color: var(--mdc-theme-on-primary);
+}
+
+.top-app-bar-counter {
+    font-size: var(--mdc-typography-body2-font-size, 0.875rem);
+    display: inline-block;
+}
+
+.mdc-menu .mdc-deprecated-list {
+  color: var(--mdc-theme-on-surface);
+}
+
+.mdc-select:not(.mdc-select--disabled).mdc-select--focused .mdc-floating-label {
+  color: var(--mdc-theme-on-surface);
+}
+
+.mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {
+  color: var(--mdc-theme-on-surface);
+}
+
+.mdc-data-table__header-cell {
+  color: var(--mdc-theme-on-surface);
+}
+
+.mdc-data-table__pagination-total, .mdc-data-table__pagination-rows-per-page-label, .mdc-data-table__cell {
+  color: var(--mdc-theme-on-surface);
+}
+
+.mdc-drawer .mdc-deprecated-list-item {
+  color: var(--mdc-theme-on-surface);
+}
+
+.mdc-card {
+  color: var(--mdc-theme-on-surface);
+}
+
+/* MDC Theming */
+.material-icons.md-18 { font-size: 18px; }
+
+/* MDC Theming. Custom drawer navigation: bigger icons */
+a.mdc-deprecated-list-item i.material-icons-outlined {
+    font-size: 30px;
+    padding-right: 0.5em;
+}
+
+div.login-margins {
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+.mdc-card table {
+  padding: var(--mdc-layout-grid-margin-desktop);
+}
+
+/*.mdc-data-table__header-cell--checkbox {
+  width: 31px;
+}
+
+.mdc-data-table__row--selected {
+  background-color: var(--mdc-theme-text-disabled-on-accent);
+}*/
+
+tr {
+  user-select: none;
+}
+
+/* MDC Theming. Custom drawer navigation: no access keys on mobile */
+@media (max-width: 480px) {
+  /* Custom drawer navigation: no access keys on mobile */
+  span.drawer_ak {
+    display: none;
+  }
+  /* Custom top-app-bar: no counter on mobile */
+  span.top-app-bar-counter {
+    display: none;
+  }
+  /* MDC Theming: reduce padding on mobile */
+  .mdc-data-table__cell, .mdc-data-table__header-cell {
+    padding: 0 5px 0 5px;
+  }
+  .main-content {
+    padding: 0 4px;
+  }
+  div.details {
+    margin: 4px 0;
+  }
+  div.login-margins {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  .mdc-card table {
+    padding: var(--mdc-layout-grid-margin-phone, 16px);
+  }
+}
+
+/* MDC Theming */
+@media (min-width: 840px) {
+  .mdc-layout-grid {
+      box-sizing: border-box;
+      margin: 0 var(--mdc-layout-grid-margin-desktop);
+      padding: var(--mdc-layout-grid-margin-desktop) 0;
+  }
+}
+
+/* MDC Theming. Custom text field: floating label color when focused */
+/*.mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {
+   color: var(--mdc-theme-primary);
+}
+
+.mdc-select:not(.mdc-select--disabled).mdc-select--focused .mdc-floating-label {
+   color: var(--mdc-theme-primary);
+}*/
+
+.w-400 {
+  width: 200px;
+}
+
+.w-150 {
+  width: 150px;
+}
+
+.no_display {
+  display: none;
+}
+
+.display {
+  display: contents;
+/*  text-align: left;
+  justify-content: left;*/
+}
+
+input, textarea, select {
+  border-top: none;
+  border-left: none;
+  border-bottom: thin solid;
+}
+
+input, select {
+  border-right: none;
+}
+
+textarea {
+  border-right: thin solid;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+}
+
+input[type="submit"]:focus {
+  outline: thin solid;
+}
+
+select:focus {
+  border-bottom: ridge;
+  outline: none;
+}
+
+input.buttons {
+  padding: 0.3em;
+  border: solid thin;
+}
+
+a:link, a:visited {
+  text-decoration: underline;
+  color: var(--mdc-theme--on-primary);
+}
+
+/* preventing user-agent CSS */
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+  transition: background-color 600000s 0s, color 600000s 0s;
+}
+
+@media (max-width: 359px) {
+  div.report-filter {
+    height: 18em;
+  }
+  div.subform-report {
+    top: 19em;
+    height: 18em;
+  }
+  div.comm-filter{
+    overflow-y: auto;
+    height: 20em;
+  }
+  div.comm-table {
+    padding-top: 20em;
+  }
+  div.comm-wrapper {
+    top: 10em;
+  }
+  div.wrapper1 {
+    grid-template-columns: auto;
+  }
+  div.wrapper2,
+  div.wrapper3,
+  div.wrapper4,
+  div.wrapper5,
+  div.wrapper6,
+  div.wrapper7,
+  div.wrapper8,
+  div.wrapper9,
+  div.wrapper10 {
+    grid-template-columns: auto auto;
+  }
+  div.subform div.label {
+    text-align: left;
+  }
+  div.subform div.value {
+    text-align: left;
+  }
+  div.label {
+    text-align: left;
+  }
+  div.value {
+    text-align: left;
+  }
+  div.span2 {
+    grid-column: span 1;
+  }
+  div.span3 {
+    grid-column: span 1;
+  }
+  div.span4 {
+    grid-column: span 1;
+  }
+  div.span5 {
+    grid-column: span 1;
+  }
+}
+
+@media (min-width: 360px) {
+  div.report-filter {
+    height: 15em;
+  }
+  div.subform-report {
+    top: 16em;
+    height: 30em;
+  }
+  div.comm-table {
+    padding-top: 19em;
+  }
+  div.comm-wrapper {
+    top: 10.9em;
+  }
+  div.wrapper1{
+    grid-template-columns: auto;
+  }
+  div.wrapper2,
+  div.wrapper3,
+  div.wrapper4,
+  div.wrapper5,
+  div.wrapper6,
+  div.wrapper7,
+  div.wrapper8,
+  div.wrapper9,
+  div.wrapper10 {
+    grid-template-columns: auto auto;
+  }
+  div.subform div.label {
+    text-align: left;
+  }
+  div.subform div.value {
+    text-align: left;
+  }
+  div.label {
+    text-align: left;
+  }
+  div.value {
+    text-align: left;
+  }
+  div.span2 {
+    grid-column: span 2;
+  }
+  div.span3 {
+    grid-column: span 2;
+  }
+  div.span4 {
+    grid-column: span 2;
+  }
+  div.span5 {
+    grid-column: span 2;
+  }
+}
+
+/*@media (min-width: 359px or max-width: 409px) {
+  div.report-filter {
+    height: 19em;
+  }
+  div.subform-report {
+    top: 19em;
+  }
+  div.comm-table {
+    padding-top: 18em;
+  }
+  div.comm-wrapper {
+    top: 10.8em;
+  }
+  div.include {
+      --bottom-margin: calc(calc(var(--menu-height) * 2) + var(--navbar-height));
+  }
+}*/
+
+@media (min-width: 410px) {
+  div.report-filter {
+    height: 19em;
+  }
+  div.subform-report {
+    top: 22em;
+    height: 26em;
+  }
+  div.comm-table {
+    padding-top: 18em;
+  }
+  div.comm-wrapper {
+    top: 10.8em;
+  }
+ div.wrapper1 {
+   grid-template-columns: auto;
+ }
+ div.wrapper2,
+ div.wrapper3,
+ div.wrapper4,
+ div.wrapper5,
+ div.wrapper6,
+ div.wrapper7,
+ div.wrapper8,
+ div.wrapper9,
+ div.wrapper10 {
+   grid-template-columns: auto auto;
+ }
+ div.subform div.label {
+   text-align: left;
+ }
+ div.subform div.value {
+   text-align: left;
+ }
+ div.label {
+   text-align: right;
+ }
+ div.value {
+   text-align: left;
+ }
+ div.span2 {
+   grid-column: span 2;
+ }
+ div.span3 {
+   grid-column: span 2;
+ }
+ div.span4 {
+   grid-column: span 2;
+ }
+ div.span5 {
+   grid-column: span 2;
+ }
+
+  div.include {
+      --bottom-margin: calc(var(--menu-height) + var(--navbar-height));
+  }
+}
+
+@media (min-width: 481px) {
+  div.report-filter {
+    height: 18em;
+  }
+  div.subform-report {
+    top: 23em;
+    height: 23em;
+  }
+  div.comm-table {
+    padding-top: 18em;
+  }
+  div.comm-wrapper {
+    top: 10.8em;
+  }
+ div.wrapper1 {
+   grid-template-columns: auto;
+ }
+ div.wrapper2,
+ div.wrapper3,
+ div.wrapper4,
+ div.wrapper5 {
+   grid-template-columns: auto auto;
+ }
+ div.wrapper6,
+ div.wrapper7,
+ div.wrapper8,
+ div.wrapper9,
+ div.wrapper10 {
+   grid-template-columns: repeat(4, auto);
+ }
+ div.subform div.label {
+    text-align: left;
+ }
+ div.subform div.value {
+    text-align: left;
+ }
+ div.label {
+    text-align: left;
+ }
+ div.value {
+    text-align: left;
+ }
+ div.span2 {
+     grid-column: span 2;
+ }
+ div.span3 {
+     grid-column: span 2;
+ }
+ div.span4 {
+     grid-column: span 2;
+ }
+ div.span5 {
+     grid-column: span 2;
+ }
+}
+
+@media (min-width: 769px) {
+  div.report-filter {
+    height: 14em;
+  }
+  div.subform-report {
+    top: 15em;
+    height: 23em;
+  }
+  div.comm-wrapper {
+    top: 7.5em;
+  }
+  div.comm-table {
+    padding-top: 10em;
+  }
+  div.wrapper1 {
+    grid-template-columns: auto;
+  }
+  div.wrapper2 {
+    grid-template-columns: auto auto;
+  }
+  div.wrapper3 {
+    grid-template-columns: repeat(3, auto);
+  }
+  div.wrapper4 {
+    grid-template-columns: repeat(4, auto);
+  }
+  div.wrapper5 {
+    grid-template-columns: repeat(5, auto);
+  }
+  div.wrapper6 {
+    grid-template-columns: repeat(6, auto);
+  }
+  div.wrapper7 {
+    grid-template-columns: repeat(7, auto);
+  }
+  div.wrapper8 {
+    grid-template-columns: repeat(8, auto);
+  }
+  div.wrapper9 {
+    grid-template-columns: repeat(9, auto);
+  }
+  div.wrapper10 {
+    grid-template-columns: repeat(10, auto);
+  }
+
+  div.span2 {
+    grid-column: span 2;
+  }
+  div.span3 {
+    grid-column: span 3;
+  }
+  div.span4 {
+    grid-column: span 4;
+  }
+  div.span5 {
+    grid-column: span 5;
+  }
+
+  #delete div.wrapper6 div.label {
+    text-align: left;
+  }
+  #delete div.wrapper6 div.value {
+    text-align: left;
+  }
+
+  div.subform div.label {
+    text-align: left;
+  }
+  div.subform div.value {
+    text-align: left;
+  }
+  div.label {
+    text-align: right;
+  }
+  div.value {
+    text-align: left;
+  }
+}
+
+@media (min-width: 1230px) {
+  div.subform-report {
+    top: 15em;
+    height: 35em;
+  }
+}
+
+div.header {
+    position: fixed;
+    top: 0;
+    left: var(--page-margin);
+    width: var(--full-width);
+    height: var(--title-height);
+    padding-top: var(--page-margin);
+    text-align: center;
+    z-index: 1;
+}
+
+div.input-header {
+    position: fixed;
+    top: var(--title-height);
+    left: 0;
+    width: var(--full-width);
+    /* top and bottom | left and right */
+    padding: var(--page-margin) 0;
+/*     background-color: var(--page-background); */
+    text-align: center;
+    margin: auto;
+}
+
+div.include,
+div.include-report {
+/*     margin-top: var(--title-height); */
+/*     width: 100%; */
+/*     background-color: var(--page-background); */
+}
+
+div.include {
+    margin-bottom: var(--bottom-margin);
+}
+
+div.include-report {
+    margin-bottom: var(--footer-height);
+}
+
+div.subform-list {
+    width: var(--full-width);
+    overflow-y: auto;
+    white-space: nowrap;
+}
+
+div.subform,
+div.subform-report {
+    overflow-x: auto;
+}
+
+div.subform-report {
+    position: fixed;
+    /* top see media queries */
+    /* height see media queries */
+    width: 100%;
+    overflow-y: auto;
+    white-space: nowrap;
+}
+
+thead.report-thead {
+    position: sticky;
+    top: 0;
+}
+
+table {
+    width: 100%;
+}
+
+th {
+  text-align: left;
+  font-weight: bold;
+}
+
+div.subform-report table {
+    border-collapse: collapse;
+    empty-cells: show;
+}
+
+div.subform-report th {
+    border: 1px solid;
+    padding: var(--th-padding);
+    min-height: 1em;
+    text-align: left;
+    font-weight: bold;
+}
+
+th.buttons {
+    text-align: center;
+}
+
+div.subform-report td {
+    border: 1px solid;
+    padding: var(--td-padding);
+    min-height: 1em;
+    vertical-align: middle;
+    text-align: left;
+}
+
+.td-admin {
+    padding: 0 0.5em;
+    text-align: center;
+}
+
+.td-admin a {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+/* Delete record form */
+#delete {
+    margin-top: calc(var(--title-height) * 2);
+}
+
+form {
+/*     background-color: var(--page-background); */
+}
+
+/* Grid for records */
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout */
+/* https://travishorn.com/responsive-grid-in-2-minutes-with-css-grid-layout-4842a41420fe */
+div.wrapper1,
+div.wrapper2,
+div.wrapper3,
+div.wrapper4,
+div.wrapper5,
+div.wrapper6,
+div.wrapper7,
+div.wrapper8,
+div.wrapper9,
+div.wrapper10 {
+    display: grid;
+/*    border-width: thin 0 0 thin;
+    border-style: solid none none solid;*/
+}
+
+div.subform div.wrapper2 {
+    grid-template-columns: repeat(2, auto);
+}
+div.subform div.wrapper3 {
+    grid-template-columns: repeat(3, auto);
+}
+div.subform div.wrapper4 {
+    grid-template-columns: repeat(4, auto);
+}
+div.subform div.wrapper5 {
+    grid-template-columns: repeat(5, auto);
+}
+div.subform div.wrapper6 {
+    grid-template-columns: repeat(6, auto);
+}
+div.subform div.wrapper7 {
+    grid-template-columns: repeat(7, auto);
+}
+div.subform div.wrapper8 {
+    grid-template-columns: repeat(8, auto);
+}
+div.subform div.wrapper9 {
+    grid-template-columns: repeat(9, auto);
+}
+div.subform div.wrapper10 {
+    grid-template-columns: repeat(10, auto);
+}
+
+div.wrapper4overflow {
+    grid-template-columns: repeat(4, auto);
+}
+div.wrapper5overflow {
+    grid-template-columns: repeat(5, auto);
+}
+div.wrapper8overflow {
+    grid-template-columns: repeat(8, auto);
+}
+div.wrapper9overflow {
+    grid-template-columns: repeat(9, auto);
+}
+div.wrapper10overflow {
+    grid-template-columns: repeat(10, auto);
+}
+
+div.wrapper4overflow,
+div.wrapper5overflow,
+div.wrapper8overflow,
+div.wrapper9overflow,
+div.wrapper10overflow {
+    display: grid;
+    overflow-x: auto;
+    padding-top: var(--page-margin);
+}
+
+div.label,
+div.value {
+  padding: 0.2em;
+  min-height: 1em;
+}
+
+div.label {
+/*   font-weight: bold; */
+  --mdc-typography-body1-font-weight: bold;
+  white-space: nowrap;
+}
+
+div.value {
+  white-space: normal;
+}
+
+div.subform div.label,
+div.subform div.value {
+  border-width: 0 thin thin 0;
+  border-style: none solid solid none;
+
+}
+
+div.center {
+  text-align: center;
+}
+
+.center-content {
+  justify-content: center;
+}
+
+div.buttons {
+  position: sticky;
+  text-align: center;
+  white-space: nowrap;
+  /* top and bottom | left and right */
+  padding: var(--page-margin) 0;
+/*   background-color: var(--page-background); */
+}
+
+div.button-close {
+  position: sticky;
+  top: var(--title-height);
+  text-align: center;
+  white-space: nowrap;
+  /* top and bottom | left and right */
+  padding: var(--page-margin) 0;
+/*   background-color: var(--page-background); */
+}
+
+p.copyright {
+  font-size: xx-small;
+}

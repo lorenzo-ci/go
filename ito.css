@@ -1,0 +1,142 @@
+/*@page {
+  size: 210mm 297mm;
+}*/
+
+body {
+    background-color: white;
+    color: black;
+    font-family: arial, sans-serif;
+    margin-top: 4%;
+    margin-bottom: 4%;
+}
+
+table {
+    border-top: 0px;
+    margin: auto;
+    width: 88%;
+    orphans: 4;
+    widows: 2;
+    border-collapse: collapse;
+    border-spacing: 0;
+    empty-cells: show;
+}
+
+table.header {
+    border: 0px;
+}
+
+table.sub {
+    text-align: center;
+}
+
+th {
+    border: 1px solid black;
+    padding: 0.2em;
+    font-size: 10pt;
+    font-weight: bold;
+    text-align: left;
+}
+
+th.sub {
+    text-align: center;
+    height: 1cm;
+}
+
+tr {
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+}
+
+tr.header {
+    border: 0px;
+}
+
+tr.order-header {
+    height: 1cm;
+}
+
+tr.firstrow {
+    border-top: 3px solid black;
+    height: 1cm;
+}
+
+tr.lastrow {
+    border-bottom: 3px solid black;
+    height: 1cm;
+}
+
+td {
+    border: 1px solid black;
+    padding: 0.2em;
+    text-align: left;
+    font-size: 10pt;
+    vertical-align: top;
+}
+
+td.header {
+    border: 0px;
+    height: 1cm;
+}
+
+td.order-header {
+    vertical-align: middle;
+}
+
+td.logo {
+    border: 0px;
+    padding:1em;
+}
+
+td.int {
+    border: 0px;
+    padding:2em;
+    font-family: serif;
+}
+
+td.sub {
+    text-align: center;
+    border: 0px;
+    border-bottom: 1px dotted black;
+}
+
+td.sub-left {
+    text-align: center;
+    border: 0px;
+    border-left: 3px solid black;
+    border-right: 1px solid black;
+    border-bottom: 1px dotted black;
+}
+
+td.sub-right {
+    text-align: center;
+    border: 0px;
+    border-right: 3px solid black;
+    border-left: 1px solid black;
+    border-bottom: 1px dotted black;
+}
+
+div.signature {
+    margin-top: 1cm;
+    width: 88%;
+    font-size: 10pt;
+    font-weight: bold;
+    text-align: right;
+    margin-right: 2%;
+}
+
+div.company-name {
+    font-size:160%;
+    font-weight: bold;
+}
+
+span.bold-text {
+    font-weight: bold;
+}
+
+input {
+    border: 0px;
+}
+div.pagebreak {
+        clear: both;
+        page-break-after: always;
+}

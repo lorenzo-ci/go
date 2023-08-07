@@ -1,0 +1,75 @@
+body {
+    background-color: white;
+    color: black;
+    font-family: times, serif;
+}
+
+div.header {
+    margin: 3% 0 3% 0;
+    text-align: center;
+}
+
+div.subform {
+    margin: 1% 0 0 0;
+}
+
+div.footer {
+    vertical-align: bottom;
+    margin: 3% 0 0 0;
+    text-align: center;
+}
+
+nav, .recordnav, .dropbtn, .dropup, .dropup-content {
+    display: none;
+}
+
+input, select, textarea {
+    border: black solid 1px;
+    font-size: smaller;
+}
+
+input.buttons {
+    background-color: white;
+}
+
+a {
+    text-decoration: none;
+    /* Color for Mozilla */
+    color: black;
+}
+
+table {
+    border: 2px solid black;
+    margin: 0 2% 0 2%;
+    width: 96%;
+    orphans: 4;
+    widows: 2;
+    border-collapse: collapse;
+    border-spacing: 0;
+    empty-cells: show;
+}
+
+th {
+    border: 1px solid black;
+    padding: 0.2em;
+    font-size: smaller;
+    font-weight: bold;
+    text-align: left;
+}
+
+td {
+    border: 1px solid black;
+    padding: 0.2em;
+    text-align: left;
+    font-size: smaller;
+    vertical-align: top;
+}
+
+td.td-admin, th.td-admin {
+    display: none;
+}
+
+th.buttons {
+    display: none;
+}
+
